@@ -1,2 +1,2 @@
 # eHiWAY
-A copy of project of CCIC.
+A copy of project of CICIEC.
