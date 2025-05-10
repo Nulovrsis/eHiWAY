@@ -1,0 +1,3 @@
+sys_rst_n_to_data,sys_rst_n
+sccb_scl,i2c_scl
+sccb_sda,i2c_sda

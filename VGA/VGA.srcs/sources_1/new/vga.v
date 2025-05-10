@@ -1,0 +1,25 @@
+`timescale 1 ps/ 1 ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company:
+// Engineer:
+//
+// Create Date: 04-19-2025 12:45:43
+// Design Name:
+// Module Name: vga
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
+// Revision:
+// Additional Comments:
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module vga(
+
+    );
+endmodule

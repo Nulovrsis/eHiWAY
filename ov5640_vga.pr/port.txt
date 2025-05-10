@@ -1,0 +1,56 @@
+clk_gen, clk_gen_inst, areset, 
+clk_gen, clk_gen_inst, inclk0, sys_clk
+clk_gen, clk_gen_inst, c0, clk_100m
+clk_gen, clk_gen_inst, c1, clk_100m_shift
+clk_gen, clk_gen_inst, c2, clk_25m
+clk_gen, clk_gen_inst, c3, xclk
+clk_gen, clk_gen_inst, locked, locked
+ov5640_top, ov5640_top_inst, sys_clk, clk_25m
+ov5640_top, ov5640_top_inst, sys_rst_n, rst_n
+ov5640_top, ov5640_top_inst, sys_init_done, sys_init_done
+ov5640_top, ov5640_top_inst, ov5640_pclk, ov5640_pclk
+ov5640_top, ov5640_top_inst, ov5640_href, ov5640_href
+ov5640_top, ov5640_top_inst, ov5640_vsync, ov5640_vsync
+ov5640_top, ov5640_top_inst, ov5640_data, ov5640_data
+ov5640_top, ov5640_top_inst, cfg_done, cfg_done
+ov5640_top, ov5640_top_inst, sccb_scl, sccb_scl
+ov5640_top, ov5640_top_inst, sccb_sda, sccb_sda
+ov5640_top, ov5640_top_inst, ov5640_wr_en, wr_en
+ov5640_top, ov5640_top_inst, ov5640_data_out, wr_data
+sdram_top, sdram_top_inst, sys_clk, clk_100m
+sdram_top, sdram_top_inst, clk_out, clk_100m_shift
+sdram_top, sdram_top_inst, sys_rst_n, rst_n
+sdram_top, sdram_top_inst, wr_fifo_wr_clk, ov5640_pclk
+sdram_top, sdram_top_inst, wr_fifo_wr_req, wr_en
+sdram_top, sdram_top_inst, wr_fifo_wr_data, wr_data
+sdram_top, sdram_top_inst, sdram_wr_b_addr, 24'h0
+sdram_top, sdram_top_inst, sdram_wr_e_addr, 
+sdram_top, sdram_top_inst, wr_burst_len, 10'h200
+sdram_top, sdram_top_inst, wr_rst, 
+sdram_top, sdram_top_inst, rd_fifo_rd_clk, clk_25m
+sdram_top, sdram_top_inst, rd_fifo_rd_req, rd_en
+sdram_top, sdram_top_inst, rd_fifo_rd_data, rd_data
+sdram_top, sdram_top_inst, sdram_rd_b_addr, 24'h0
+sdram_top, sdram_top_inst, sdram_rd_e_addr, 
+sdram_top, sdram_top_inst, rd_burst_len, 10'h200
+sdram_top, sdram_top_inst, rd_rst, 
+sdram_top, sdram_top_inst, read_valid, 1'h1
+sdram_top, sdram_top_inst, pingpang_en, 1'h1
+sdram_top, sdram_top_inst, init_end, sdram_init_done
+sdram_top, sdram_top_inst, sdram_clk, sdram_clk
+sdram_top, sdram_top_inst, sdram_cke, sdram_cke
+sdram_top, sdram_top_inst, sdram_cs_n, sdram_cs_n
+sdram_top, sdram_top_inst, sdram_ras_n, sdram_ras_n
+sdram_top, sdram_top_inst, sdram_cas_n, sdram_cas_n
+sdram_top, sdram_top_inst, sdram_we_n, sdram_we_n
+sdram_top, sdram_top_inst, sdram_ba, sdram_ba
+sdram_top, sdram_top_inst, sdram_addr, sdram_addr
+sdram_top, sdram_top_inst, sdram_dq, sdram_dq
+sdram_top, sdram_top_inst, sdram_dqm, sdram_dqm
+vga_ctrl, vga_ctrl_inst, vga_clk, clk_25m
+vga_ctrl, vga_ctrl_inst, sys_rst_n, rst_n
+vga_ctrl, vga_ctrl_inst, pix_data, rd_data
+vga_ctrl, vga_ctrl_inst, pix_data_req, rd_en
+vga_ctrl, vga_ctrl_inst, hsync, vga_hs
+vga_ctrl, vga_ctrl_inst, vsync, vga_vs
+vga_ctrl, vga_ctrl_inst, rgb, vga_rgb

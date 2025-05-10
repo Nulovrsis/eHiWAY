@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Product Version: eLinx v1.0.0.0-->
+<!--								-->
+<!--Copyright 2017-2024 eHiWay, Inc. All Rights Reserved.-->
+<Hierarchy>
+    <DesignSources>
+        <Node ModuleName="vga_colorbar" PortName="hsync,rgb[15:0],sys_clk,sys_rst_n,vsync" PortSignal="output,output,input,input,output" ParameterName="" InstName="" IsIP="false" IsUserIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath="" SyntaxError="true" FilePath="/VGA.srcs/sources_1/new/vga_colorbar.v">
+            <Child ModuleName="clk_gen" InstName="clk_gen_inst" FilePath="" IsIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath=""/>
+            <Child ModuleName="vga_ctrl" InstName="vga_ctrl_inst" FilePath="" IsIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath=""/>
+            <Child ModuleName="vga_pic" InstName="vga_pic_inst" FilePath="" IsIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath=""/>
+        </Node>
+        <Node ModuleName="vga_ctrl" PortName="hsync,pix_data[15:0],pix_x[9:0],pix_y[9:0],rgb[15:0],sys_rst_n,vga_clk,vsync" PortSignal="output,input,output,output,output,input,input,output" ParameterName="H_SYNC,H_BACK,H_LEFT,H_VALID,H_RIGHT,H_FRONT,H_TOTAL,V_SYNC,V_BACK,V_TOP,V_VALID,V_BOTTOM,V_FRONT,V_TOTAL" InstName="" IsIP="false" IsUserIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath="" SyntaxError="true" FilePath="/VGA.srcs/sources_1/new/vga_ctrl.v"/>
+        <Node ModuleName="vga_pic" PortName="pix_data[15:0],pix_x[9:0],pix_y[9:0],sys_rst_n,vga_clk" PortSignal="output,input,input,input,input" ParameterName="H_VALID,V_VALID,RED,ORANGE,YELLOW,GREEN,CYAN,BLUE,PURPPLE,BLACK,WHITE,GRAY" InstName="" IsIP="false" IsUserIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath="" SyntaxError="true" FilePath="/VGA.srcs/sources_1/new/vga_pic.v"/>
+        <MifHexFiles/>
+        <SyntaxErrorFiles/>
+        <OtherFiles/>
+        <BlockDesignFiles/>
+    </DesignSources>
+    <SimulationSources>
+        <SimSet Name="sim_1">
+            <Node ModuleName="tb_vga_ctrl" InstName="" IsIP="false" IsUserIP="false" EciPath="" IsBlockDesign="false" BlockDesignPath="" SyntaxError="true" FilePath="/VGA.srcs/sim_1/new/tb_vga_ctrl.v"/>
+            <MifHexFiles/>
+            <SyntaxErrorFiles/>
+            <OtherFiles/>
+        </SimSet>
+    </SimulationSources>
+</Hierarchy>

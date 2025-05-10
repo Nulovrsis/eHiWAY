@@ -1,0 +1,11 @@
+Synthesis Status : Successful
+eLinx Version : 3.0 
+Top-level Entity Name : ov5640_vga_640x480
+Total LUTs : 1530
+Total FFs : 748
+Total CLBs : 196
+Total Memorys : 8
+Total DSPs : 0
+Total PLLs : 1
+Total Pins : 73
+Device Min Height : 2
