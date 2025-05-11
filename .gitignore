@@ -3,3 +3,4 @@ incremental_db/
 ov5640_vga.runs/
 log4cpp.property
 db/
+hierarchy.xml
