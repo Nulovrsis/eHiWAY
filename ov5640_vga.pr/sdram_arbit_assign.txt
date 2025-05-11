@@ -1,2 +1,0 @@
-sdram_dq,wr_sdram_en,wr_data
-,sdram_cmd

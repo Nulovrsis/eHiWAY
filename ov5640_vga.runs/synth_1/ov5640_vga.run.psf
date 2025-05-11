@@ -1,5 +1,0 @@
-source $vecdir/ov5640_vga.srcs/sources_1/ip/fifo_data/fifo_data.edc
-read_sdc $vecdir/ov5640_vga.srcs/sources_1/ip/fifo_data/fifo_data.edc
-source $vecdir/ov5640_vga.srcs/constrs_1/new/ov5640_vga.edc
-read_sdc $vecdir/ov5640_vga.srcs/constrs_1/new/ov5640_vga.edc
-set_global_assignment -name TARGET_CONSTRAINT_FILE $vecdir/ov5640_vga.srcs/constrs_1/new/ov5640_vga.edc

@@ -1,2 +1,0 @@
-rst_n,sys_rst_n,locked
-sys_init_done,sdram_init_done_pclk_s2,cfg_done_pclk_s2

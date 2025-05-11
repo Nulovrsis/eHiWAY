@@ -1,3 +1,0 @@
-c0,wireC
-c1,wireC
-c2,wireC
