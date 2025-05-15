@@ -1,52 +1,57 @@
-set_location_assignment PIN_C8 -to ov5640_data\[0\]
+create_clock -period 20.000 -name {sys_clk} -waveform {0.000 10.000} [get_ports {sys_clk~I}]
+create_clock -period 39.680 -name {pclk} -waveform {0.000 19.840} [get_ports {ov5640_pclk~I}]
+create_generated_clock -name {i2c_clk} -source [get_pins {\clk_gen_inst|altpll_component|pll/clk[2]}] -divide_by 25 [get_pins {\ov5640_top_inst|i2c_ctrl_inst|i2c_clk~I/regout}]
+set_false_path -from [get_clocks {\clk_gen:clk_gen_inst|altpll:altpll_component|_clk0}] -to [get_clocks {pclk}]
+set_false_path -from [get_pins {\ov5640_top_inst|ov5640_cfg_inst|cfg_done~I/regout}] -to [get_pins {\cfg_done_pclk_s1~I/dataa}]
+set_location_assignment PIN_V19 -to ov5640_data\[0\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[0\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[0\]
-set_location_assignment PIN_B8 -to ov5640_data\[1\]
+set_location_assignment PIN_Y20 -to ov5640_data\[1\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[1\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[1\]
-set_location_assignment PIN_C7 -to ov5640_data\[2\]
+set_location_assignment PIN_P18 -to ov5640_data\[2\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[2\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[2\]
-set_location_assignment PIN_A7 -to ov5640_data\[3\]
+set_location_assignment PIN_R17 -to ov5640_data\[3\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[3\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[3\]
-set_location_assignment PIN_A6 -to ov5640_data\[4\]
+set_location_assignment PIN_Y19 -to ov5640_data\[4\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[4\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[4\]
-set_location_assignment PIN_A5 -to ov5640_data\[5\]
+set_location_assignment PIN_AB19 -to ov5640_data\[5\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[5\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[5\]
-set_location_assignment PIN_B6 -to ov5640_data\[6\]
+set_location_assignment PIN_T18 -to ov5640_data\[6\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[6\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[6\]
-set_location_assignment PIN_C5 -to ov5640_data\[7\]
+set_location_assignment PIN_P19 -to ov5640_data\[7\]
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_data\[7\]
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_data\[7\]
-set_location_assignment PIN_C6 -to ov5640_href
+set_location_assignment PIN_R19 -to ov5640_href
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_href
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_href
-set_location_assignment PIN_A12 -to ov5640_pclk
+set_location_assignment PIN_K17 -to ov5640_pclk
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_pclk
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_pclk
-set_location_assignment PIN_A9 -to ov5640_pwdn
+set_location_assignment PIN_V20 -to ov5640_pwdn
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_pwdn
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ov5640_pwdn
 set_instance_assignment -name OPEN_DRAIN_OUTPUT OFF -to ov5640_pwdn
 set_instance_assignment -name SLEW_TYPE SLOW -to ov5640_pwdn
-set_location_assignment PIN_A8 -to ov5640_rst_n
+set_location_assignment PIN_AB20 -to ov5640_rst_n
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_rst_n
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ov5640_rst_n
 set_instance_assignment -name OPEN_DRAIN_OUTPUT OFF -to ov5640_rst_n
 set_instance_assignment -name SLEW_TYPE SLOW -to ov5640_rst_n
-set_location_assignment PIN_D7 -to ov5640_vsync
+set_location_assignment PIN_R16 -to ov5640_vsync
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to ov5640_vsync
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to ov5640_vsync
-set_location_assignment PIN_D6 -to sccb_scl
+set_location_assignment PIN_R15 -to sccb_scl
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to sccb_scl
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to sccb_scl
 set_instance_assignment -name OPEN_DRAIN_OUTPUT OFF -to sccb_scl
 set_instance_assignment -name SLEW_TYPE SLOW -to sccb_scl
-set_location_assignment PIN_B3 -to sccb_sda
+set_location_assignment PIN_P17 -to sccb_sda
 set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to sccb_sda
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to sccb_sda
 set_instance_assignment -name OPEN_DRAIN_OUTPUT OFF -to sccb_sda
@@ -371,9 +376,3 @@ set_instance_assignment -name IO_STANDARD "3.3V LVTTL" -to xclk
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to xclk
 set_instance_assignment -name OPEN_DRAIN_OUTPUT OFF -to xclk
 set_instance_assignment -name SLEW_TYPE SLOW -to xclk
-
-create_clock -period 20.000 -name {sys_clk} -waveform {0.000 10.000} [get_ports {sys_clk~I}]
-create_clock -period 39.680 -name {pclk} -waveform {0.000 19.840} [get_ports {ov5640_pclk~I}]
-create_generated_clock -name {i2c_clk} -source [get_pins {\clk_gen_inst|altpll_component|pll/clk[2]}] -divide_by 25 [get_pins {\ov5640_top_inst|i2c_ctrl_inst|i2c_clk~I/regout}]
-set_false_path -from [get_clocks {\clk_gen:clk_gen_inst|altpll:altpll_component|_clk0}] -to [get_clocks {pclk}]
-set_false_path -from [get_pins {\ov5640_top_inst|ov5640_cfg_inst|cfg_done~I/regout}] -to [get_pins {\cfg_done_pclk_s1~I/dataa}]

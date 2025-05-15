@@ -23,8 +23,8 @@ module sdram_write
     ////
 
     //parameter define
-    parameter TRCD_CLK = 10'd2 + 1 , //激活周期
-              TRP_CLK = 10'd2 + 1 ; //预充电周期
+    parameter TRCD_CLK = 10'd3 , //激活周期
+              TRP_CLK = 10'd3 ; //预充电周期
     parameter WR_IDLE = 4'b0000 , //初始状态
               WR_ACTIVE = 4'b0001 , //激活
               WR_TRCD = 4'b0011 , //激活等待

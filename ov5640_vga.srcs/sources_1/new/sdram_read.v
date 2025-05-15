@@ -22,9 +22,9 @@ module sdram_read
     ////
 
     //parameter define
-    parameter TRCD_CLK = 10'd2 + 1 , //激活等待周期
+    parameter TRCD_CLK = 10'd3 , //激活等待周期
               TCL_CLK = 10'd3 , //潜伏期
-              TRP_CLK = 10'd2 + 1; //预充电等待周期
+              TRP_CLK = 10'd3; //预充电等待周期
     parameter RD_IDLE = 4'b0000 , //空闲
               RD_ACTIVE = 4'b0001 , //激活
               RD_TRCD = 4'b0011 , //激活等待
