@@ -34,6 +34,9 @@ module  ov5640_top(
     wire            cfg_clk     ;
     wire [7:0] gray_out;
     wire       gray_valid;
+    wire [7:0] sampled_gray;
+    wire       sampled_valid;
+    wire [9:0] sampled_addr;
     //********************************************************************//
     //*************************** Instantiation **************************//
     //********************************************************************//
@@ -97,5 +100,18 @@ module  ov5640_top(
                        .gray_out    (gray_out),
                        .gray_valid  (gray_valid)
                    );
+
+    //------------- gray_32x32_sampler_inst -------------
+    gray_32x32_sampler gray_32x32_sampler_inst(
+                           .clk           (ov5640_pclk),
+                           .rst_n         (sys_rst_n & sys_init_done),
+                           .gray_in       (gray_out),
+                           .gray_valid    (gray_valid),
+                           .ov5640_href   (ov5640_href),
+                           .ov5640_vsync  (ov5640_vsync),
+                           .sampled_gray  (sampled_gray),
+                           .sampled_valid (sampled_valid),
+                           .sampled_addr  (sampled_addr)
+                       );
 
 endmodule
