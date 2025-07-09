@@ -32,7 +32,8 @@ module  ov5640_top(
     wire            cfg_start   ;
     wire    [23:0]  cfg_data    ;
     wire            cfg_clk     ;
-
+    wire [7:0] gray_out;
+    wire       gray_valid;
     //********************************************************************//
     //*************************** Instantiation **************************//
     //********************************************************************//
@@ -86,5 +87,15 @@ module  ov5640_top(
                     .ov5640_data_out    (ov5640_data_out)    //图像数据
 
                 );
+
+    //------------- rgb565_to_gray_inst -------------
+    rgb565_to_gray rgb565_to_gray_inst(
+                       .clk         (ov5640_pclk),
+                       .rst_n       (sys_rst_n & sys_init_done),
+                       .rgb565_in   (ov5640_data_out),
+                       .pixel_valid (ov5640_wr_en),
+                       .gray_out    (gray_out),
+                       .gray_valid  (gray_valid)
+                   );
 
 endmodule
